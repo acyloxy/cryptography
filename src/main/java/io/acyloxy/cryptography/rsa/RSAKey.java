@@ -1,4 +1,4 @@
-package io.acyloxy.rsa;
+package io.acyloxy.cryptography.rsa;
 
 import java.math.BigInteger;
 import java.util.Random;

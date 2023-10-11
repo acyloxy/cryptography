@@ -1,7 +1,4 @@
-package io.acyloxy.rsa;
-
-import java.math.BigInteger;
-import java.util.Arrays;
+package io.acyloxy.cryptography.rsa;
 
 public class RSA {
     private RSAKey publicKey;
