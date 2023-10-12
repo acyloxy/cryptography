@@ -60,10 +60,12 @@ public record RSAKey(Type type, BigInteger exponent, BigInteger modulus) {
 
     public String toPrettyString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("-".repeat(27)).append(switch (type) {
-            case PUBLIC -> "PUBLIC";
-            case PRIVATE -> "PRIVATE";
-        }).append(" KEY").append("-".repeat(27)).append("\n");
+        builder.append("-".repeat(25));
+        switch (type) {
+            case PUBLIC -> builder.append("RSA PUBLIC KEY").append("-".repeat(25));
+            case PRIVATE -> builder.append("RSA PRIVATE KEY").append("-".repeat(24));
+        }
+        builder.append("\n");
         for (String line : split(exponent.toString(16), 64)) {
             builder.append(line).append("\n");
         }
